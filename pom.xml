@@ -10,6 +10,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>todo</module>
+        <module>create-todo</module>
+        <module>list-todos</module>
+        <module>complete-todo</module>
     </modules>
 
     <properties>
