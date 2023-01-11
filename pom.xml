@@ -14,6 +14,7 @@
         <module>list-todos</module>
         <module>complete-todo</module>
         <module>todo-data-access</module>
+        <module>todo-console</module>
     </modules>
 
     <properties>
