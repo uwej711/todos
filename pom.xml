@@ -13,6 +13,7 @@
         <module>create-todo</module>
         <module>list-todos</module>
         <module>complete-todo</module>
+        <module>todo-data-access</module>
     </modules>
 
     <properties>
