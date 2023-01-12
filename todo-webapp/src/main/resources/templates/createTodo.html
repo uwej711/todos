@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO Web App</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+    <h1>Create todo</h1>
+    <form th:action="@{/create-todo}" th:object="${createTodoFormObject}" method="post">
+        <p>Title: <input type="text" th:field="*{title}" /></p>
+        <p>Due date: <input type="date" th:field="*{dueDate}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+    </body>
+</html>

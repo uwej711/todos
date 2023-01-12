@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO Web App</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+    <h1>Todos</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Title</td>
+                <td>Due date</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="todo: ${todos}">
+                <td th:text="${todo.id}"/>
+                <td th:text="${todo.title}" />
+                <td th:text="${#dates.format(todo.dueDate, 'yyyy-MM-dd')}" />
+                <td>
+                    <form th:action="@{/complete-todo}" method="post">
+                        <input type="hidden" th:name="id" th:value="${todo.id}"/>
+                        <input type="submit" value="Complete" />
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/create-todo}">Create Todo</a>
+    </body>
+</html>
